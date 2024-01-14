@@ -10,29 +10,49 @@
 <body>
 
     <header>
-        <h1>Calculadora</h1>
+        <h1> MI CALCULADORA</h1>
     </header>
 
-    <div>
-        <form action="index.py">
-            <input type="number" name="ingresar" placeholder="Calculadora" required>
-            <button name="1">1</button>
-            <button name="2">2</button>
-            <button name="3">3</button>
-            <button name="4">4</button>
-            <button name="5">5</button>
-            <button name="6">6</button>
-            <button name="7">7</button>
-            <button name="8">8</button>
-            <button name="9">9</button>
-            <button name="0">0</button>
-            <button name="suma" onclick="modulop.suma">+</button>
-            <button name="resta" onclick="modulop.resta">-</button>
-            <button name="division" onclick="modulop.division">/</button>
-            <button name="multiplicacion" onclick="modulop.multiplicacion">x</button>
-            <button name="potenciacion" onclick="modulop.potenciacion">**</button>
-            <input type="number" name="resultadofinal" placeholder="Resultado" onclick="resultadofinal">
-        </form>
+    <div id="teclado">
+
+        <input id="miInput" type="number" placeholder="Calculadora" required readonly>
+        <button class="calcular">Calcular</button>
+        <button class="borrar">Borrar</button>
+        <button class="historial">Historial</button>
+            <div class="numeros">
+                <button class= "numero" onclick="insertarNumero(1)">1</button>
+                <button class= "numero" onclick="insertarNumero(2)">2</button>
+                <button class= "numero" onclick="insertarNumero(3)">3</button>
+
+                <button class= "numero" onclick="insertarNumero(4)">4</button>
+                <button class= "numero" onclick="insertarNumero(5)">5</button>
+                <button class= "numero" onclick="insertarNumero(6)">6</button>
+
+                <button class= "numero" onclick="insertarNumero(7)">7</button>
+                <button class= "numero" onclick="insertarNumero(8)">8</button>
+                <button class= "numero" onclick="insertarNumero(9)">9</button>
+                <button class= "numero" onclick="insertarNumero(0)">0</button>
+
+                <button onclick="modulop.suma()">+</button>
+                <button onclick="modulop.resta()">-</button>
+                <button onclick="modulop.division()">/</button>
+                <button onclick="modulop.multiplicacion()">x</button>
+                <button onclick="modulop.potenciacion()">**</button>
+            </div>
+            
+        <input type="number" placeholder="Resultado" onclick="resultadofinal" readonly>
+
+        <script>
+            
+            function insertarNumero(numero) {
+                // Obtener el elemento de input por su ID
+                var input = document.getElementById("miInput");
+                
+                // Establecer el valor del input al número seleccionado
+                input.value = numero;
+            }
+      </script>
+
     </div>
     
 </body>

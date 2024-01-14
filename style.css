@@ -1,0 +1,41 @@
+body{
+    margin: 40px;
+}
+
+header{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(45, 151, 151);     
+    text-align: center;
+    padding: 50px;
+    color: white;
+}
+
+div{
+    padding: 30px;
+}
+
+input{
+    padding: 20px;
+    width: 50rem; 
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+}
+
+input:hover,
+input:focus {
+  border-color: #69c;
+}
+
+.calcular,
+.borrar,
+.numero,
+.historial{
+    padding: 20px;
+}
+
+.numero{
+    display: flex;
+    justify-content: space-between;
+}
